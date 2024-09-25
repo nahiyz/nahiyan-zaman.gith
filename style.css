@@ -1,0 +1,86 @@
+
+@charset "utf-8";
+/* CSS Document */
+
+body {
+    font-family: Arial, sans-serif;    /* Arial font */
+    font-size: 12pt; /* Size of font */
+    margin: 18pt;  /*margins */
+    background-color: #ccffff;  /* background colour */
+    color: #006666; /* colour reference # */
+    color: darkgreen;
+
+
+}
+
+h1 {
+font-size: 24pt; 
+color: #003366; 
+font-weight: bold;  /* Bold weight for importance */
+}
+
+h2 {
+font-size: 20pt;  
+color: #0000cc;  
+font-weight: normal; /* normal font */
+}
+
+h2x {
+font-size: 18pt;  
+color: #0099ff;  
+font-weight: lighter; /* lighter font */
+}
+
+phead {
+font-size: 14pt;  /* Font size for paragraphs, seperated from body */
+color: #333399;  
+font-weight: bold;
+}
+
+p {
+
+color: #6600cc; 
+font-weight: normal;
+}
+
+/* Links and their functions */
+
+a:link, a:visited {
+color: darkblue;  /* Dark blue for both unvisited and visited links */
+text-decoration: none;  /* no effect */
+}
+
+a:hover {
+color: orange;   
+text-decoration: underline;  /* Add underline when user hovers on page */
+}
+
+a:active {
+color: blue;  /* Blue on active, after clicking on page */
+text-decoration: none;
+}
+
+table, td, th {
+border: 1px solid;
+}
+
+table {
+width: 100%;
+border-collapse: collapse;
+background-color : lightgreen;
+}
+
+#text-container {
+padding: 20px;
+border: 1px solid #ccc;
+background-color: #f9f9f9;
+}
+
+#link-container {
+padding: 20px;
+border: 1px solid #ccc;
+background-color: #f1f1f1;
+
+}
+
+/*style tag is to denote the CSS code */
