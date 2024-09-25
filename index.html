@@ -1,45 +1,126 @@
-<!DOCTYPE html>
-<head>
-    <title>Nahiyan's ITM780 Lab Assignment #2</title>
-    <style>
+<!DOCTYPE html>  <!-- Indicates the the HTML doctype -->
+<head> <!-- header of website  --> <!-- X -->
+    <title> Nahiyan's Personal Website </title> <!-- Title --> 
+    <style> 
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
+            font-family: Arial, sans-serif;    /* Arial font */
+            font-size: 12pt; /* Size of font */
+            margin: 18pt;  /*margins */
+            background-color: #ccffff;  /* background colour */
+    		color: #006666; /* colour reference # */
+            color: darkgreen;
+
+
         }
-      
-    </style>
+
+h1 {
+    font-size: 24pt; 
+    color: #003366; 
+    font-weight: bold;  /* Bold weight for importance */
+}
+
+h2 {
+    font-size: 20pt;  
+    color: #0000cc;  
+    font-weight: normal; /* normal font */
+}
+
+h2x {
+    font-size: 18pt;  
+    color: #0099ff;  
+    font-weight: lighter; /* lighter font */
+}
+
+phead {
+    font-size: 14pt;  /* Font size for paragraphs, seperated from body */
+    color: #333399;  
+    font-weight: bold;
+}
+
+p {
+
+    color: #6600cc; 
+    font-weight: normal;
+}
+
+/* Links and their functions */
+
+a:link, a:visited {
+    color: darkblue;  /* Dark blue for both unvisited and visited links */
+    text-decoration: none;  /* no effect */
+}
+
+a:hover {
+    color: orange;   
+    text-decoration: underline;  /* Add underline when user hovers on page */
+}
+
+a:active {
+    color: blue;  /* Blue on active, after clicking on page */
+    text-decoration: none;
+}
+
+table, td, th {
+  border: 1px solid;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color : lightgreen;
+}
+
+#text-container {
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+#link-container {
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+
+}
+
+/*style tag is to denote the CSS code */
+    </style>     
 </head>
 <body>
 
     <header>
-        <h1>Nahiyan's ITM780 Lab Assignment #2</h1>
-        <p>This is an example page for my website that highlights my education enrollments, courses, extra-curricular activities and educational awards </p>
+        <h1>Nahiyan's ITM780 Lab Assignment #3 </h1> <!-- X -->
+        <phead>This is an example page for my website that highlights my education enrollments, courses, extra-curricular activities and educational awards </phead>
+        <!-- h is for the header elements, p__ stands for text/pargraph-->  
+    
     </header>
 
     <!-- Education/School Section -->
         <h2>Education</h2>
-        <ol>
+        <ol>   <!-- Open list with numbers -->
         <li><strong>High School #1:</strong> Riverdale Collegiate Institute (Sept 2016 - June 2017)</li>
         <li><strong>High School #2:</strong> SATEC W.A Porter Collegiate Institute (Sept 2017 - June 2020)</li>
             <li><strong>University:</strong> Ted Rogers School of Management, Toronto Metropolitan University (formerly Ryerson University) - Bachelor of Commerce in Business Technology Management (Sept 2020 - Present)</li>
         </ol>
+          <!-- Li generates any list as bullet points/ numbers/ etc. -->
    
 
     <!-- Program and course description -->
-    <section>
+    <section>     <!-- Defines an open section on the webpage as formatting -->
         <h2>About My Program</h2>
         <p>The Business Technology Management (BTM) program combines both business and IT concepts, to prepare me in many industries when managing technical projects and creating effective solutions using technology to address business needs. </p>
         
-        <h3>Most Useful Course</h3>
+        <h2x>Most Useful Course</h2x>
         <p>The course I found most useful is <strong> ITM618 (Business Intelligence and Analytics).</strong> This course provided me a strong foundation of business intelligence, including the development and the use of data warehouses, datamarts and different machine learning algorithms through course content, Python labs, and statistical projects. In simple terms, it deepens your understanding on business decision-making through analytics. </p>
     </section>
 
     <!-- Awards -->
         <h2>Educational Awards</h2>
-        <ul>
+        <ul>   <!-- List with bullet points -->
             <li>Dean's List 2020-2021, Ted Rogers School of Management </li>
             <li>Outstanding Student Leadership Award, Satec W.A Porter Collegiate Institute - 2018</li>
         </ul>
+        
 
     <!-- Extra-curricular activities -->
     <section>
@@ -52,12 +133,32 @@
             <li>Participant, Ted Rogers Leadership Program</li>
         </ol>
     </section>
+ 
+<!-- Text container within the textual content -->
+<!-- Link container around the content involving the link -->
+  <table>
+    <tr>
+      <th>Link</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td> <div id="link-container">  <a href="https://www.youtube.com/" target="_blank">Youtube</a></div> </td> 
+      <td> <div id="text-container"> Youtube is an American online video sharing platform owned by Google. It was launched on February 15, 2005. </div> </td>>
+    </tr>
+    <tr>
+      <td> <div id="link-container">  <a href="https://www.torontomu.ca/" target="_blank"> TMU Homepage </a></div> </td>
+      <td> <div id="text-container"> Toronto Metropolitan University (formerly Ryerson University), is a university located in Toronto, Ontario. Being at the heart of Canada's most dynamic city adds incredible energy to our campus. Here, opportunity abounds and collaboration runs deep, crossing between our city, classrooms, studios and labs.</div> </td>
+    </tr>
+  </table>
+
 
     <!-- Link to Linkedln -->
-    <footer>
+    <footer>  <!-- Footer for the page, resembled from the header -->
         <p>If you want to have a chat and take a look into my background , please visit my <a href="https://www.linkedin.com/in/nahiyan-zaman/" target="_blank">linkedln profile</a>.</p>
     </footer>
+     <!-- The a tag is used for the links -->
 
 </body>
 </html>
 
+ <!-- Comment out this lab when studying for the quiz, because it will be very useful -->
