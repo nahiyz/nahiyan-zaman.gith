@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nahiyan's Personal Website</title>
+</head>
+<script src="forms.js"></script>
+<style>
+   
+@charset "utf-8";
+/* CSS Document */
+
+#myimg { /* Setting the image */
+    display: block;
+    margin: 0 auto; /* Putting the image in the center and horizontally */
+}
+
+/* Modifying the navigation bar style */
+.nvbar { /*class for navigation bar */
+     list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: darkblue;
+    border: 3px solid lightgreen;
+    display: flex; /* Enables Flexbox, a container that alligns navigation bar's child items into rows/columns */
+    justify-content: center; /* Centers all items horizontally(left to right) */
+    align-items: center; /* Centers all items vertically(top to bottom)*/
+
+}
+
+/* Navigation items */
+.nvbar > li {
+    float: left;   /* Each item floats to the left, creating a horizontal navigation bar (left > right)*/
+}
+
+/* Links inside the navigation items */
+.nvbar > li > a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none; /* removes default underline */
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    /* smooth transition effect of 0.3 seconds whenever the background colour or the colour of the element changes, on hover and active states. Ease refers to start slow, speed up in the middle, and than slow down again at the end in the transition process */
+}
+
+/* Links on hover */
+.nvbar > li > a:hover {
+    background-color: #005bb5; /*changes background colour to _ */
+    color: #f0f4f8; 
+}
+
+/* Dropdown menu items styling*/
+.dropdown-content {
+    display: none; /* Initially hidden by default */
+    position: absolute;  /* Positioned without affecting the layout*/ 
+    background-color: #f9f9f9; /* Changing background to light grey  */
+    min-width: 160px; /* minimum width  */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* adds shadow around dropdown menu */
+    z-index: 1; /* ensure it appears above other content  */
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+    border-radius: 4px; /* rounds the border of the dropdown content with a slight curve with a 4-pixel radius */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* adds a shadow effect on each element */
+}
+
+/* Stylling dropdown links */
+.dropdown-content li a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    padding: 10px 15px;
+    font-size: 14px;
+}
+
+/* Dropdown links on hover */
+.dropdown-content li a:hover {
+     background-color: #0073e6;
+   
+}
+
+/* Show the dropdown menu when hovered */
+.nvbar li.dropdownmain:hover .dropdown-content {
+    display: block; /* When user hovers over the parent navigation item, the dropdown menu will become visible  */
+}
+
+/* Dropdown button styles */
+.dropbutton {
+    display: block;
+    padding: 14px 20px;
+    background-color: darkblue;
+    color: white;
+    text-decoration: none;
+    border: none;
+}
+
+.dropbutton:hover { /* hovering the dropdown button */
+    background-color: #ddd;
+    color: green;
+}
+
+body {
+    font-family: Arial, sans-serif;    /* Arial font */
+    font-size: 12pt; /* Size of font */
+    margin: 18pt;  /*margins */
+    background-color: #ccffff;  /* background colour */
+    color: darkblue;   /* sets colour of text to dark blue */
+    max-width: 900px;   /* COMMENT */
+    margin: 0 auto;  /* COMMENT */
+    padding: 20px; /* COMMENT */
+    background-color: #f0f4f8; /* COMMENT */
+    
+  }
+
+h1 {
+
+    color: #003366; 
+    font-weight: bold;  /* Bold weight for importance */
+    font-size: 28px;
+    color: #00509e;
+    margin-top: 20px; /* Adds 20 pixels above the element */
+    line-height: 1.2; /* Sets spacing between the lines of text to 1.2 times the font size */
+}
+
+</style>
+
+<body>
+
+ <!-- Image ID and source of it is derived from here, sets the width and bottom spacing-->
+<img id="myimg" src="myself.jpeg" alt="Image of Myself" style="width:250px;padding-bottom:20px;" onclick="imagelrg()"> <!-- function enlarges image -->
+<!-- Alt is for alternative text,  -->
+
+<nav> <!-- Wraps entire navigation bar -->
+    <ul class="nvbar"> <!-- Creates unordered list initially -->
+        <!-- First three navigation items linking to actual pages with hover effect -->
+        <li><a href="index.html" onmouseover="mOver(this)" onmouseout="mOut(this)">Home</a></li> <!-- Link to homepage -->
+        <li><a href="about.html" onmouseover="mOver(this)" onmouseout="mOut(this)">About</a></li> <!-- Link to about page -->
+        <li><a href="interest.html" onmouseover="mOver(this)" onmouseout="mOut(this)">Interests</a></li> <!-- Link to interests page -->
+          
+
+        <!-- Fourth navigation item, includes a dropdown -->
+        <li class="dropdownmain">
+            <a href="javascript:void(0)" class="dropbutton" onclick="tggldropdown()">Services</a> <!-- event handler calls this function when user clicks on the Services button, to show/hide the dropdown menu -->
+            <ul class="dropdown-content">
+                <li><a href="#">Consulting</a></li>
+                <li><a href="#">Development</a></li>
+            </ul>
+        </li>
+        
+        <li><a href="Contactinfo.html" onmouseover="mOver(this)" onmouseout="mOut(this)">Contact me </a></li> <!-- Link to contact information page -->
+        
+    </ul>
+</nav>
+
+    <header>
+        <h1> Contact Page </h1> <!-- X -->
+        <phead> This is the contact page, where you can contact me for any inquiries. To contact me, please enter the following information below. </phead>
+        <!-- h is for the header elements, p__ stands for text/pargraph-->  
+    
+    </header>
+   
+    <!-- Form with all fields-->  
+    <h2></h2>
+    <form id="contactForm">  <!-- form element groups together, working as a single unit -->
+        <!-- Name field -->
+        <label for="username">Name:</label> <!-- Describes field and connects to it to the input element, using the for attribute-->
+        <input id="usrname" type="text" placeholder="Enter your name"><br><br> <!-- Placeholder text displays what kind of input is expected for the usrname element-->
+
+        <!-- Message (multi-line text area) where users can enter a longer message -->
+        <label for="message">Message:</label><br>
+        <textarea id="msg" name="message" rows="4" cols="30"  placeholder="Your message..."></textarea><br><br>
+        <!-- 4 rows and 30 columns-->
+
+        <!-- Radio buttons for gender, one button for gener, anothe for female, and last for other -->
+        <label>Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label><br><br>
+        <input type="radio" id="other" name="gender" value="Other">
+        <label for="other">Other</label><br><br>
+        
+         <!-- Age -->
+        <label for="age">Age:</label>
+        <input type="number" id="agex" name="age" min="0" max="100" placeholder="e.g., 25"><br><br> <!-- Min age is 0, and max age that can be inputted is 100-->
+
+        <!-- Email and phone fields on the form -->
+        <label for="email">Email:</label>
+        <input type="email" id="emxl" name="email" placeholder="example@example.com"><br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phne" name="phone" placeholder="123-456-7890"><br><br> 
+
+        <!-- Checkboxes for services interested in, user can select more than one of these checkboxes -->
+        <label>Services Interested In:</label><br>
+        <input type="checkbox" id="consulting" name="services" value="Consulting">
+        <label for="consulting">Consulting</label>
+        <input type="checkbox" id="development" name="services" value="Development">
+        <label for="development">Development</label><br><br>
+
+        <!-- Dropdown for Reason for Contact -->
+        <label for="reason">Reason for Contact:</label>
+        <select id="rsn" name="reason">
+            <option value="general">General Inquiry</option>
+            <option value="consulting">Consulting Request</option>
+            <option value="feedback">Website Feedback</option>
+            <!-- Each value is an option on the dropdown list, one for general, another for consuling, and another one for feedback-->
+        </select>
+        <br><br>
+
+        <!-- Dropdown for Country, Options: Canada, USA and Other -->
+        <label for="country">Country:</label>
+        <select id="cntry" name="country">
+            <option value="Canada">Canada</option>
+            <option value="USA">USA</option>
+            <option value="Other">Other</option>
+        </select><br><br>
+
+        <!-- Date for preferred contact date -->
+        <label for="contactDate">Preferred Contact Date:</label>
+        <input type="date" id="ctcdte" name="contactDate"><br><br>
+
+        
+         <!-- File upload for documents -->
+        <label for="documents">Upload Documents:</label>
+        <input type="file" id="documents" name="v"><br><br>
+
+        <!-- Submit and Reset buttons -->
+        <button type="button" onclick="submitForm()">Submit</button>
+        <button type="reset">Clear</button>
+         
+    </form>
+ 
+</body>
+</html>
