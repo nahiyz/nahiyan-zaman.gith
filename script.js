@@ -1,4 +1,4 @@
-// ---- JAVA SCRIPT DOCUMENT ---- //
+// ---- JAVA SCRIPT DOCUMENT for index.html ---- //
 
 // prompt for user's name
 function prmptname() { //defines function
@@ -20,7 +20,7 @@ function imagelrg() {
 
 // Onmouseover/Onmouseout events and functions
 function mOver(element) {   // When user moves the mouse over an element
-    element.style.color = "green";  // Changes color to green
+    element.style.color = "lightgreen";  // Changes color to green
 }
 
 function mOut(element) { // When the mouse moves away from the element
