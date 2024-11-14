@@ -4,110 +4,169 @@
 <title> Nahiyan's Personal Website </title> <!-- Title --> 
 </head> 
 <link rel="stylesheet" href="style.css">
+<script src="https://w.soundcloud.com/player/api.js"></script>
 <script src="script.js"></script>
 <body>
-
- 
- <!-- button to prompt user to enter their name -->
- <button onclick="prmptname()">Click to Enter Your Name</button>
- <!-- prmptname method displays a dialog prompting the user to input text  -->
- 
-    <!-- button -->
-<p id="nameopt"></p>
-
-<!-- Image ID and source of it is derived from here, sets the width and bottom spacing-->
-<img id="myimg" src="myself.jpeg" alt="Image of Myself" style="width:250px;padding-bottom:20px;" onclick="imagelrg()"> <!-- function enlarges image -->
-<!-- Alt is for alternative text,  -->
-
-<nav> <!-- Wraps entire navigation bar -->
-<ul class="nvbar"> <!-- Creates unordered list initially -->
-    <!-- First three navigation items linking to actual pages with hover effect -->
-    <li><a href="index.html" onmouseover="mOver(this)" onmouseout="mOut(this)">Home</a></li> <!-- Link to homepage -->
-    <li><a href="about.html" onmouseover="mOver(this)" onmouseout="mOut(this)">About</a></li> <!-- Link to about page -->
-    <li><a href="interest.html" onmouseover="mOver(this)" onmouseout="mOut(this)">Interests</a></li> <!-- Link to interests page -->
-      
-
-    <!-- Fourth navigation item, includes a dropdown -->
-    <li class="dropdownmain">
-        <a href="javascript:void(0)" class="dropbutton" onclick="tggldropdown()">Services</a> <!-- event handler calls this function when user clicks on the Services button, to show/hide the dropdown menu -->
-        <ul class="dropdown-content">
-            <li><a href="#">Consulting</a></li>
-            <li><a href="#">Development</a></li>
-        </ul>
-    </li>
+    <!-- button to prompt user to enter their name -->
+    <button onclick="prmptname()">Click to Enter Your Name</button>
+    <!-- prmptname method displays a dialog prompting the user to input text  -->
     
-    <li><a href="Contactinfo.html" onmouseover="mOver(this)" onmouseout="mOut(this)">Contact me </a></li> <!-- Link to contact information page -->
+       <!-- button -->
+   <p id="nameopt"></p>
+   
+   <!-- Image ID and source of it is derived from here, sets the width and bottom spacing-->
+   <img id="myimg" src="myself.jpeg" alt="Image of Myself" style="width:250px;padding-bottom:20px;" onclick="imagelrg()"> <!-- function enlarges image -->
+   <!-- Alt is for alternative text,  -->
+   
+   <nav> <!-- Wraps entire navigation bar -->
+   <ul class="nvbar"> <!-- Creates unordered list initially -->
+       <!-- First three navigation items linking to actual pages with hover effect -->
+       <li><a href="index.html" onmouseover="mOver(this)" onmouseout="mOut(this)">Home</a></li> <!-- Link to homepage -->
+       <li><a href="about.html" onmouseover="mOver(this)" onmouseout="mOut(this)">About</a></li> <!-- Link to about page -->
+       <li><a href="interest.html" onmouseover="mOver(this)" onmouseout="mOut(this)">Interests</a></li> <!-- Link to interests page -->
+         
+   
+       <!-- Fourth navigation item, includes a dropdown -->
+       <li class="dropdownmain">
+           <a href="javascript:void(0)" class="dropbutton" onclick="tggldropdown()">Services</a> <!-- event handler calls this function when user clicks on the Services button, to show/hide the dropdown menu -->
+           <ul class="dropdown-content">
+               <li><a href="#">Consulting</a></li>
+               <li><a href="#">Development</a></li>
+           </ul>
+       </li>
+       
+       <li><a href="Contactinfo.html" onmouseover="mOver(this)" onmouseout="mOut(this)">Contact me </a></li> <!-- Link to contact information page -->
+       
+   </ul>
+   </nav>
+   
+    <!-- Accessibility control buttons -->
+       <div class="accessibility-controls">
+           <button onclick="toggleTextSize()">Toggle Text Size</button>
+           <button onclick="toggleColorBlindMode()">Toggle Color-Blind Friendly Mode</button>
+       </div>
+   
+   <header>
+       <h1>Nahiyan's Personal Website Home </h1> <!-- X -->
+       <phead>This is an example page for my website that highlights my education enrollments, courses, extra-curricular activities and educational awards </phead>
+       <!-- h is for the header elements, p__ stands for text/pargraph-->  
+   
+   </header>
+   
+   <!-- Education/School Section -->
+       <h2>Education</h2>
+       <ol>   <!-- Open list with numbers -->
+       <li><strong>High School #1:</strong> Riverdale Collegiate Institute (Sept 2016 - June 2017)</li>
+       <li><strong>High School #2:</strong> SATEC W.A Porter Collegiate Institute (Sept 2017 - June 2020)</li>
+           <li><strong>University:</strong> Ted Rogers School of Management, Toronto Metropolitan University (formerly Ryerson University) - Bachelor of Commerce in Business Technology Management (Sept 2020 - Present)</li>
+       </ol>
+         <!-- Li generates any list as bullet points/ numbers/ etc. -->
+         
+   <!-- Program and course description -->
+   <section>     <!-- Defines an open section on the webpage as formatting -->
+       <h2>About My Program</h2>
+       <p>The Business Technology Management (BTM) program combines both business and IT concepts, to prepare me in many industries when managing technical projects and creating effective solutions using technology to address business needs. </p>
+       
+       <h2x>Most Useful Course</h2x>
+       <p>The course I found most useful is <strong> ITM618 (Business Intelligence and Analytics).</strong> This course provided me a strong foundation of business intelligence, including the development and the use of data warehouses, datamarts and different machine learning algorithms through course content, Python labs, and statistical projects. In simple terms, it deepens your understanding on business decision-making through analytics. </p>
+   </section>
+   
+   <!-- Awards -->
+       <h2>Educational Awards</h2>
+       <ul>   <!-- List with bullet points -->
+           <li>Dean's List 2020-2021, Ted Rogers School of Management </li>
+           <li>Outstanding Student Leadership Award, Satec W.A Porter Collegiate Institute - 2018</li>
+       </ul>
+       
+   <!-- Extra-curricular activities -->
+   <section>
+       <h2>Extra-curricular Activities</h2>
+       <p>During my time at university, I actively participated in different extra-curricular activities that helped me grow both personally and professionally:</p>
+       <ol>
+           <li>Finance Project Lead, IQRA Magazine at Toronto Metropolitan University</li>
+            <li>Intramurals Team Captain, Competitive Soccer at Toronto Metropolitan University</li>
+           <li>Volunteer, Dentonia Park Soccer Tournament</li>
+           <li>Participant, Ted Rogers Leadership Program</li>
+       </ol>
+   </section>
+   
+   <!-- Text container within the textual content -->
+   <!-- Link container around the content involving the link -->
+   <table>
+   <tr>
+     <th>Link</th>
+     <th>Description</th>
+   </tr>
+   <tr>
+     <td> <div id="link-container">  <a href="https://www.youtube.com/" target="_blank">Youtube</a></div> </td> 
+     <td> <div id="text-container"> Youtube is an American online video sharing platform owned by Google. It was launched on February 15, 2005. </div> </td>
+   </tr>
+   <tr>
+     <td> <div id="link-container">  <a href="https://www.torontomu.ca/" target="_blank"> TMU Homepage </a></div> </td>
+     <td> <div id="text-container"> Toronto Metropolitan University (formerly Ryerson University), is a university located in Toronto, Ontario. Being at the heart of Canada's most dynamic city adds incredible energy to our campus. Here, opportunity abounds and collaboration runs deep, crossing between our city, classrooms, studios and labs.</div> </td>
+   </tr>
+   </table>
     
-</ul>
-</nav>
-
-<header>
-    <h1>Nahiyan's Personal Website Home </h1> <!-- X -->
-    <phead>This is an example page for my website that highlights my education enrollments, courses, extra-curricular activities and educational awards </phead>
-    <!-- h is for the header elements, p__ stands for text/pargraph-->  
-
-</header>
-
-<!-- Education/School Section -->
-    <h2>Education</h2>
-    <ol>   <!-- Open list with numbers -->
-    <li><strong>High School #1:</strong> Riverdale Collegiate Institute (Sept 2016 - June 2017)</li>
-    <li><strong>High School #2:</strong> SATEC W.A Porter Collegiate Institute (Sept 2017 - June 2020)</li>
-        <li><strong>University:</strong> Ted Rogers School of Management, Toronto Metropolitan University (formerly Ryerson University) - Bachelor of Commerce in Business Technology Management (Sept 2020 - Present)</li>
-    </ol>
-      <!-- Li generates any list as bullet points/ numbers/ etc. -->
-      
-<!-- Program and course description -->
-<section>     <!-- Defines an open section on the webpage as formatting -->
-    <h2>About My Program</h2>
-    <p>The Business Technology Management (BTM) program combines both business and IT concepts, to prepare me in many industries when managing technical projects and creating effective solutions using technology to address business needs. </p>
-    
-    <h2x>Most Useful Course</h2x>
-    <p>The course I found most useful is <strong> ITM618 (Business Intelligence and Analytics).</strong> This course provided me a strong foundation of business intelligence, including the development and the use of data warehouses, datamarts and different machine learning algorithms through course content, Python labs, and statistical projects. In simple terms, it deepens your understanding on business decision-making through analytics. </p>
-</section>
-
-<!-- Awards -->
-    <h2>Educational Awards</h2>
-    <ul>   <!-- List with bullet points -->
-        <li>Dean's List 2020-2021, Ted Rogers School of Management </li>
-        <li>Outstanding Student Leadership Award, Satec W.A Porter Collegiate Institute - 2018</li>
-    </ul>
-    
-<!-- Extra-curricular activities -->
-<section>
-    <h2>Extra-curricular Activities</h2>
-    <p>During my time at university, I actively participated in different extra-curricular activities that helped me grow both personally and professionally:</p>
-    <ol>
-        <li>Finance Project Lead, IQRA Magazine at Toronto Metropolitan University</li>
-         <li>Intramurals Team Captain, Competitive Soccer at Toronto Metropolitan University</li>
-        <li>Volunteer, Dentonia Park Soccer Tournament</li>
-        <li>Participant, Ted Rogers Leadership Program</li>
-    </ol>
-</section>
-
-<!-- Text container within the textual content -->
-<!-- Link container around the content involving the link -->
-<table>
-<tr>
-  <th>Link</th>
-  <th>Description</th>
-</tr>
-<tr>
-  <td> <div id="link-container">  <a href="https://www.youtube.com/" target="_blank">Youtube</a></div> </td> 
-  <td> <div id="text-container"> Youtube is an American online video sharing platform owned by Google. It was launched on February 15, 2005. </div> </td>
-</tr>
-<tr>
-  <td> <div id="link-container">  <a href="https://www.torontomu.ca/" target="_blank"> TMU Homepage </a></div> </td>
-  <td> <div id="text-container"> Toronto Metropolitan University (formerly Ryerson University), is a university located in Toronto, Ontario. Being at the heart of Canada's most dynamic city adds incredible energy to our campus. Here, opportunity abounds and collaboration runs deep, crossing between our city, classrooms, studios and labs.</div> </td>
-</tr>
-</table>
-
-<!-- Link to Linkedln -->
-<footer>  <!-- Footer for the page, resembled from the header -->
-    <p>If you want to have a chat and take a look into my background , please visit my <a href="https://www.linkedin.com/in/nahiyan-zaman/" target="_blank">linkedln profile</a>.</p>
-</footer>
- <!-- The a tag is used for the links --> 
-
-</body>
+       <!-- Custom SoundCloud Audio Player Section -->
+       <div class="audio-container">
+           <h2>Listen to the Peace Song</h2>
+   
+           <!-- Corrected Embedded SoundCloud audio in an iframe -->
+           <iframe id="soundcloudPlayer" width="100%" height="166" scrolling="no" frameborder="no" 
+               src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/sweetmilkanderson/peace-song&color=%230066cc&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+           </iframe>
+   
+           <!-- Custom audio controls -->
+           <div class="audio-controls">
+               <button onclick="playAudio()">Play</button>
+               <button onclick="pauseAudio()">Pause</button>
+               <button onclick="playFromBeginning()">Play from Beginning</button>
+           </div>
+   
+           <!-- Caption with APA citation -->
+           <p class="caption">
+               Figure 1. Sweetmilkanderson. (n.d.). Peace Song [Audio track]. SoundCloud. Retrieved from 
+               <a href="https://soundcloud.com/sweetmilkanderson/peace-song" target="_blank">
+                   https://soundcloud.com/sweetmilkanderson/peace-song
+               </a>.
+           </p>
+       </div>
+   
+       <!-- Image Gallery Section -->
+       <div class="image-gallery">
+           <h2>Photo Gallery of Myself</h2>
+   
+           <!-- Image 1 -->
+           <div class="image-item">
+               <img src="IMG_4522.jpg" alt="A man in a striped shirt stands by a metal railing overlooking mountains in a valley. The sky is at sunet, with a gradient of deep blue to warm orange hear the horizon. A wheelchair accessibility sign is visible, along with trees and people walking below the hills " id="image1">
+               <p class="image-caption">(Date: 2024-07-06, Location: Ohlone College, Fremont, CA, United States)</p>
+               <p class="alt-text" id="altText1"></p>
+           </div>
+   
+           <!-- Image 2 -->
+           <div class="image-item">
+               <img src="IMG_4742.jpg" alt="A man wearing a white shirt and black pants stands by a wooding railing on a pier, with a sandy beach and the ocean behind him. The sky is clear and blue, with umbrellas along the shore, as well as palm trees and coastal buildings.  " id="image2">
+               <p class="image-caption">(Date: 2024-07-10, Location: Pismo State Beach, CA, United States)</p>
+               <p class="alt-text" id="altText2"></p>
+           </div>
+   
+           <!-- Image 3 -->
+           <div class="image-item">
+               <img src="IMG_4821.jpeg" alt="A man wearing a checkered blue and white shirt and a beige cap sits on a rock ledge, gazing out at a scenic mountain landscape. A mountain peak rises against a blue sky with scattered clounds, alongisde a barreen tree nearby" id="image3">
+               <p class="image-caption">(Date: 2024-07-11, Location: Glacier Point, Coulterville, CA, United States)</p>
+               <p class="alt-text" id="altText3"></p>
+           </div>
+   
+           <!-- Button to Toggle Alt Text -->
+           <button onclick="toggleAltText()">Toggle Alt Text Descriptions</button>
+       </div>
+       
+       <!-- Link to Linkedln -->
+   <footer>  <!-- Footer for the page, resembled from the header -->
+       <p>If you want to have a chat and take a look into my background , please visit my <a href="https://www.linkedin.com/in/nahiyan-zaman/" target="_blank">linkedln profile</a>.</p>
+   </footer>
+    <!-- The a tag is used for the links --> 
+   
+   </body>
 </html>
 
