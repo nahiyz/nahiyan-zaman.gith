@@ -1,276 +1,145 @@
 <!DOCTYPE HTML5>  <!-- Indicates the the HTML doctype -->
 <html>
-    <head> <!-- header of website  --> <!-- X -->
-        <meta charset="UTF-8">
-        <meta name="description" content="A web page demonstrating SEO and SMO techniques.">
-        <meta name="keywords" content="SEO, SMO, meta tags, social media optimization">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Nahiyan's Personal Website </title> <!-- Title --> 
-    </head> 
+<head> <!-- header of website  --> <!-- X -->
+    <meta charset="UTF-8">
+    <meta name="description" content="A web page demonstrating SEO and SMO techniques.">
+    <meta name="keywords" content="SEO, SMO, meta tags, social media optimization">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Nahiyan's Personal Website </title> <!-- Title --> 
+</head> 
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
-<link rel="stylesheet" href="style.css">
 <script src="https://w.soundcloud.com/player/api.js"></script>
-<script src="script.js"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QDFS36SMB9Fxuy7sOHWw84/SjqxnfGxIk1klfDd5mr5e+Gx9+6M7lbC4n6W8Orta" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HtBR6TWuboz61MNG0V+KTYTYBLWswMEkJQ1BunUorKLMmtgSQZySHtxWoInNmd4v" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"> </script>
+
 <body>
-    <!-- button to prompt user to enter their name -->
-    <button onclick="prmptname()">Click to Enter Your Name</button>
-    <!-- prmptname method displays a dialog prompting the user to input text  -->
+
+ <!-- button to prompt user to enter their name -->
+ <button onclick="prmptname()">Click to Enter Your Name</button>
+ <!-- prmptname method displays a dialog prompting the user to input text  -->
+ 
+    <!-- button -->
+<p id="nameopt"></p>
+
+<!-- Image ID and source of it is derived from here, sets the width and bottom spacing-->
+<img id="myimg" src="myself.jpeg" alt="Image of Myself" style="width:250px;padding-bottom:20px;" onclick="imagelrg()"> <!-- function enlarges image -->
+<!-- Alt is for alternative text,  -->
+
+<nav> <!-- Wraps entire navigation bar -->
+    <ul class="nvbar"> <!-- Creates unordered list initially -->
+        <!-- First three navigation items linking to actual pages with hover effect -->
+        <li><a href="index.html" onmouseover="mOver(this)" onmouseout="mOut(this)">Home</a></li> <!-- Link to homepage -->
+        <li><a href="education.html" onmouseover="mOver(this)" onmouseout="mOut(this)">Education</a></li> <!-- Link to about page -->
+        <li><a href="hiringdocs.html" onmouseover="mOver(this)" onmouseout="mOut(this)">Hiring Docs</a></li> <!-- Link to interests page -->
+          
+        
+        <li><a href="contactform.html" onmouseover="mOver(this)" onmouseout="mOut(this)">Contact Me </a></li> <!-- Link to contact information page -->
+        
+    </ul>
+    </nav>
+
+ <!-- Accessibility control buttons -->
+ <div class="accessibility-controls">
+    <button onclick="toggleTextSize()">Click To Toggle Text Size</button>
+    <button onclick="toggleColorBlindMode()">Click To Toggle Color-Blind Friendly Mode</button>
+</div>
+
+
+<header>
+    <h1>Home </h1> <!-- X -->
+    <p> Welcome to my online portfolio website!  Scroll down to learn about me and a few of my personal projects         </p>
+  
+    <!-- h is for the header elements, p__ stands for text/pargraph-->  
+</header>
+
+
+<h2>  About me </h2>
+<p>  Hello, I'm Nahiyan Zaman, a fourth-year undergraduate student at Toronto Metropolitan University. I am passionate about combining my business acumen with technology to solve complex problems and create innovative solutions. My interests lie in software development, data analytics, business intelligence, digital optimization, and leveraging technology to drive efficiency and growth.
+
+I am always eager to learn and adapt to new challenges, with a strong focus on personal and professional growth. In my spare time, I enjoy exploring creative projects, building my skill set, and staying updated on industry trends. </p>
+
+
+<div class="about-images">
+    <div class="image-container">
+        <!-- Image 1 -->
+        <div>
+            <img src="CN-Tower-landscape-shot.jpg" > <p class="image-caption">Toronto Skyline View</p>
+        </div>
+        <!-- Image 2 -->
+        <div>
+            <img src="IMG_2783.jpg"> <p class="image-caption"> Picture of myself at CIBC Square</p>
+        </div>
+        <!-- Image 3 -->
+        <div>
+            <img src="Image 1 - Software Dev.jpg" > <p class="image-caption">Lightbulb depicting innovation </p>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Image Gallery Section -->
+    <div class="image-gallery">
+    <h3>Personal Projects</h3>
+
+        <!-- Image 1 -->
+        <div class="image-item">
+            <img src="YorkTech Management System - Manage Inventory.png" alt="A clean and intuitive back-end user interface for the YorkTech Management System representing the manage inventory use case. This use case displays the options for adding, updating, deleting, and viewing products. This system streamlines inventory management processes and optimizes warranty processing with a focus on user-friendly design and operational efficiency." id="image1">
+            <p class="image-caption">(Year: 2024 | Project: YorkTech Supply LTD IT Solution | Course: ITM900 - IT Capstone Project)</p>
+            <p class="alt-text" id="altText1"></p>
+        </div>
+
+        <!-- Image 2 -->
+        <div class="image-item">
+            <img src="Not the Wave - ITM550 Website .png" alt="A responsive and visually appealing e-commerce website created for Not The Wave, showcasing products such as hoodies and sweatpants with the company’s logo. The website emphasizes simplicity and ease of navigation, featuring a vibrant blue theme and an about section detailing the brand’s mission to deliver quality clothing." id="image2">
+            <p class="image-caption">(Year: 2022 | Project: Not The Wave - Shopify E-Commerce Website | Course: ITM550 - Advanced E-Business  )</p>
+            <p class="alt-text" id="altText2"></p>
+        </div>
+
+        <!-- Image 3 -->
+        <div class="image-item">
+            <img src="Decision Tree- ITM618 Project.png" alt="A decision tree visualization from an experiment comparing classification methods, including decision tree analysis and KNN analysis. The project aimed to predict whether clients of a Portuguese banking institution would subscribe to a term deposit. The KNN analysis achieved higher accuracy (14.02%) compared to the decision tree (13.95%), leading to the recommendation of KNN as the preferred classifier for the institution." id="image3">
+            <p class="image-caption">(Year: 2022 | Project: Classification Analysis: Decision Tree vs. KNN for Banking Predictions | Course: ITM618 - Business Intelligence And Analytics )</p>
+            <p class="alt-text" id="altText3"></p>
+        </div>
+
+        <!-- Button to Toggle Alt Text -->
+        <button onclick="toggleAltText()">Click To Toggle Alt Text Descriptions</button>
+    </div>
     
-       <!-- button -->
-   <p id="nameopt"></p>
-   
-   <!-- Image ID and source of it is derived from here, sets the width and bottom spacing-->
-   <img id="myimg" src="myself.jpeg" alt="Image of Myself" style="width:250px;padding-bottom:20px;" onclick="imagelrg()"> <!-- function enlarges image -->
-   <!-- Alt is for alternative text,  -->
-   
-   <nav> <!-- Wraps entire navigation bar -->
-   <ul class="nvbar"> <!-- Creates unordered list initially -->
-       <!-- First three navigation items linking to actual pages with hover effect -->
-       <li><a href="index.html" onmouseover="mOver(this)" onmouseout="mOut(this)">Home</a></li> <!-- Link to homepage -->
-       <li><a href="about.html" onmouseover="mOver(this)" onmouseout="mOut(this)">About</a></li> <!-- Link to about page -->
-       <li><a href="interest.html" onmouseover="mOver(this)" onmouseout="mOut(this)">Interests</a></li> <!-- Link to interests page -->
-         
-   
-       <!-- Fourth navigation item, includes a dropdown -->
-       <li class="dropdownmain">
-           <a href="javascript:void(0)" class="dropbutton" onclick="tggldropdown()">Services</a> <!-- event handler calls this function when user clicks on the Services button, to show/hide the dropdown menu -->
-           <ul class="dropdown-content">
-               <li><a href="#">Consulting</a></li>
-               <li><a href="#">Development</a></li>
-           </ul>
-       </li>
-       
-       <li><a href="Contactinfo.html" onmouseover="mOver(this)" onmouseout="mOut(this)">Contact me </a></li> <!-- Link to contact information page -->
-       
-   </ul>
-   </nav>
-   
-    <!-- Accessibility control buttons -->
-       <div class="accessibility-controls">
-           <button onclick="toggleTextSize()">Toggle Text Size</button>
-           <button onclick="toggleColorBlindMode()">Toggle Color-Blind Friendly Mode</button>
-       </div>
-   
-   <header>
-       <h1>Nahiyan's Personal Website Home </h1> <!-- X -->
-       <phead>This is an example page for my website that highlights my education enrollments, courses, extra-curricular activities and educational awards </phead>
-       <!-- h is for the header elements, p__ stands for text/pargraph-->  
-   
-   </header>
-   
-   <!-- Education/School Section -->
-       <h2>Education</h2>
-       <ol>   <!-- Open list with numbers -->
-       <li><strong>High School #1:</strong> Riverdale Collegiate Institute (Sept 2016 - June 2017)</li>
-       <li><strong>High School #2:</strong> SATEC W.A Porter Collegiate Institute (Sept 2017 - June 2020)</li>
-           <li><strong>University:</strong> Ted Rogers School of Management, Toronto Metropolitan University (formerly Ryerson University) - Bachelor of Commerce in Business Technology Management (Sept 2020 - Present)</li>
-       </ol>
-         <!-- Li generates any list as bullet points/ numbers/ etc. -->
-         
-   <!-- Program and course description -->
-   <section>     <!-- Defines an open section on the webpage as formatting -->
-       <h2>About My Program</h2>
-       <p>The Business Technology Management (BTM) program combines both business and IT concepts, to prepare me in many industries when managing technical projects and creating effective solutions using technology to address business needs. </p>
-       
-       <h2x>Most Useful Course</h2x>
-       <p>The course I found most useful is <strong> ITM618 (Business Intelligence and Analytics).</strong> This course provided me a strong foundation of business intelligence, including the development and the use of data warehouses, datamarts and different machine learning algorithms through course content, Python labs, and statistical projects. In simple terms, it deepens your understanding on business decision-making through analytics. </p>
-   </section>
-   
-   <!-- Awards -->
-       <h2>Educational Awards</h2>
-       <ul>   <!-- List with bullet points -->
-           <li>Dean's List 2020-2021, Ted Rogers School of Management </li>
-           <li>Outstanding Student Leadership Award, Satec W.A Porter Collegiate Institute - 2018</li>
-       </ul>
-       
-   <!-- Extra-curricular activities -->
-   <section>
-       <h2>Extra-curricular Activities</h2>
-       <p>During my time at university, I actively participated in different extra-curricular activities that helped me grow both personally and professionally:</p>
-       <ol>
-           <li>Finance Project Lead, IQRA Magazine at Toronto Metropolitan University</li>
-            <li>Intramurals Team Captain, Competitive Soccer at Toronto Metropolitan University</li>
-           <li>Volunteer, Dentonia Park Soccer Tournament</li>
-           <li>Participant, Ted Rogers Leadership Program</li>
-       </ol>
-   </section>
-   
-   <!-- Text container within the textual content -->
-   <!-- Link container around the content involving the link -->
-   <table>
-   <tr>
-     <th>Link</th>
-     <th>Description</th>
-   </tr>
-   <tr>
-     <td> <div id="link-container">  <a href="https://www.youtube.com/" target="_blank">Youtube</a></div> </td> 
-     <td> <div id="text-container"> Youtube is an American online video sharing platform owned by Google. It was launched on February 15, 2005. </div> </td>
-   </tr>
-   <tr>
-     <td> <div id="link-container">  <a href="https://www.torontomu.ca/" target="_blank"> TMU Homepage </a></div> </td>
-     <td> <div id="text-container"> Toronto Metropolitan University (formerly Ryerson University), is a university located in Toronto, Ontario. Being at the heart of Canada's most dynamic city adds incredible energy to our campus. Here, opportunity abounds and collaboration runs deep, crossing between our city, classrooms, studios and labs.</div> </td>
-   </tr>
-   </table>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+            </div>
+            <div class="footer-social">
+            <div class="social-guidance">
+                <p>Connect with me:</p>
+            </div>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@nahiyanzaman9565" target="_blank" class="icon youtube" aria-label="Youtube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/nahiyan-zaman/" target="_blank" class="icon linkedin" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/nahiyan.z/" target="_blank" class="icon instagram" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <pfoot>&copy; 2024 Nahiyan Zaman. All rights reserved.</pfoot>
+            </div>
+        </div>
+    </footer>
     
-       <!-- Custom SoundCloud Audio Player Section -->
-       <div class="audio-container">
-           <h2>Listen to the Peace Song</h2>
-   
-           <!-- Corrected Embedded SoundCloud audio in an iframe -->
-           <iframe id="soundcloudPlayer" width="100%" height="166" scrolling="no" frameborder="no" 
-               src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/sweetmilkanderson/peace-song&color=%230066cc&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
-           </iframe>
-   
-           <!-- Custom audio controls -->
-           <div class="audio-controls">
-               <button onclick="playAudio()">Play</button>
-               <button onclick="pauseAudio()">Pause</button>
-               <button onclick="playFromBeginning()">Play from Beginning</button>
-           </div>
-   
-           <!-- Caption with APA citation -->
-           <p class="caption">
-               Figure 1. Sweetmilkanderson. (n.d.). Peace Song [Audio track]. SoundCloud. Retrieved from 
-               <a href="https://soundcloud.com/sweetmilkanderson/peace-song" target="_blank">
-                   https://soundcloud.com/sweetmilkanderson/peace-song
-               </a>.
-           </p>
-       </div>
-   
-       <!-- Image Gallery Section -->
-       <div class="image-gallery">
-           <h2>Photo Gallery of Myself</h2>
-   
-           <!-- Image 1 -->
-           <div class="image-item">
-               <img src="IMG_4522.jpg" alt="A man in a striped shirt stands by a metal railing overlooking mountains in a valley. The sky is at sunet, with a gradient of deep blue to warm orange hear the horizon. A wheelchair accessibility sign is visible, along with trees and people walking below the hills " id="image1">
-               <p class="image-caption">(Date: 2024-07-06, Location: Ohlone College, Fremont, CA, United States)</p>
-               <p class="alt-text" id="altText1"></p>
-           </div>
-   
-           <!-- Image 2 -->
-           <div class="image-item">
-               <img src="IMG_4742.jpg" alt="A man wearing a white shirt and black pants stands by a wooding railing on a pier, with a sandy beach and the ocean behind him. The sky is clear and blue, with umbrellas along the shore, as well as palm trees and coastal buildings.  " id="image2">
-               <p class="image-caption">(Date: 2024-07-10, Location: Pismo State Beach, CA, United States)</p>
-               <p class="alt-text" id="altText2"></p>
-           </div>
-   
-           <!-- Image 3 -->
-           <div class="image-item">
-               <img src="IMG_4821.jpeg" alt="A man wearing a checkered blue and white shirt and a beige cap sits on a rock ledge, gazing out at a scenic mountain landscape. A mountain peak rises against a blue sky with scattered clounds, alongisde a barreen tree nearby" id="image3">
-               <p class="image-caption">(Date: 2024-07-11, Location: Glacier Point, Coulterville, CA, United States)</p>
-               <p class="alt-text" id="altText3"></p>
-           </div>
-   
-           <!-- Button to Toggle Alt Text -->
-           <button onclick="toggleAltText()">Toggle Alt Text Descriptions</button>
-       </div>
-       
-       
-       <h1>SEO and SMO Techniques</h1>
-   
-     
-       <!-- Divider for aesthetic separation -->
-       <div class="divider"></div>
-   
-       <!-- SEO and SMO Techniques Table -->
-       <table class="content-table">
-           <thead>
-               <tr>
-                   <th>Technique</th>
-                   <th>Description</th>
-               </tr>
-           </thead>
-           <tbody>
-               <!-- Row for SEO Technique 1 -->
-               <tr>
-                   <td>SEO Technique #1: Meta Tags</td>
-                   <td>Meta Tags are a useful SEO  technique that plays a major role in enhancing SEO. They are basically a form of keywords that provide search engines with relevant date to help users understand the type of content the webpage is related to prior to clicking on it (Moz, n.d.). This can slowly increase the click-through rates, by engaging more user interest and ultimately improve website visibility and drive more traffic. In my website, I implemented meta tags by adding some code for the description, keywords and the viewport in the HTML code. </td>
-               </tr>
-   
-               <!-- Row for SEO Technique 2 -->
-               <tr>
-                   <td>SEO Technique #2: Keyword Optimization </td>
-                   <td>Page titles are another important SEO technique, as they are prominently displayed on search engine result pages. A well-crafted title with relevant keywords can improve the likelihood of users visiting the page. Titles also help search engines understand the context and content of each webpage, supporting improved ranking for appropriate searches.Keywords is another SEO technique that is used to improve ranking for specific items when searched. They are placed between the headings, metadata and the content. For example, if a user decides to enter a query on a website, the keyword analyzes that query and derives relevant content which targets the user needs. This increases the volumes of traffic on the website, and makes it more likely the website will appear on the search engine (SitePoint, n.d.). Moreover, keywords are an effective tool that retains traffic and helps a website remain relevant. </td>
-               </tr>
-   
-               <!-- Row for SEO Technique 3 -->
-               <tr>
-                   <td> SEO Technique #3: Backlink Building </td>
-                   <td> Backlink is a technique that involves a linking process with other websites by acquiring inbound links, strengthening website credibility and reputation. When other sites connect to a page, search engines use this technique by mutually trusting the website, which improves website rankings (Bruce Clay, n.d.). This leads to higher search results, and useful for when building personal portfolios or blog pages, as it is being referred by a trustworthy website. </td>
-               </tr>
-   
-               <!-- Row for SMO Technique 1 -->
-               <tr>
-                   <td>SMO Technique #1: Facebook Like Button </td>
-                   <td>The Facebook Like button is a social media technique that is used for user engagement, and can increase the website’s visibility on various social media platforms that are connected with facebook. When users click on the like button, it shares the content on the user’s Facebook network, which reaches a wider audience and has the potential to increase website traffic (Lockard, 2014). This increases user engagement, since users are more likely to navigate through websites that other people have scrolled on or used before. For personal portfolios, this builds credibility and is a way of building your social brand through social media channels.
-                </td>
-               </tr>
-   
-               <!-- Row for SMO Technique 2 -->
-               <tr>
-                   <td>SMO Technique #2: Instagram integration </td>
-                   <td> Instagram integration methods such as your personal feed, or an integration of your website with Instagram, is a form of SMO that involves effective content creation. This can help your website reach out to a younger audience and help your website remain consistent. Instagram is a visual platform that can be used to showcase any kinds of projects, products, or other forms of work to a particular audience or to the general public. By displaying instagram content on your website, this can increase user engagement and keep your website consistent for users by exploring any recent posts or activity of yours. In conclusion, Instagram integration provides professionals or portfolio creators the ability to build a strong online presence. </td>
-               </tr>
-   
-               <!-- Row for SMO Technique 3 -->
-               <tr>
-                   <td>SMO Technique #3: Twitter Sharing </td>
-                   <td>The Twitter sharing button is another SMO technique, another effective way to increase website visibility and reach. The Twitter sharing button has sharing capabilities, that users can click on to reshare a specific tweet that they want to share to their followers or publicly. Twitter users can then engage further with the tweet by replying to the content, or even resharing the tweet (Bhargava, 2010). This can generate discussions in regards to the website content. For instance, in a website portfolio, hiring professionals can make certain comments about the website and may give some useful feedback and insights. Overall, the Twitter Sharing button It is a cycle of user engagement and virtual communication through social media platforms.</td>
-               </tr>
-           </tbody>
-       </table>
-       
-           <h1>References</h1>
-       <ol>
-           <li>
-               Bhargava, R. (2010). The 5 new rules of social media optimization (SMO). Retrieved from 
-               <a href="https://rohitbhargava.com/the-5-new-rules-of-social-media-optimization-smo/" target="_blank">
-                   https://rohitbhargava.com/the-5-new-rules-of-social-media-optimization-smo/
-               </a>
-           </li>
-           <li>
-              Moz. (n.d.). The beginner's guide to SEO. Retrieved from
-               <a href="https://moz.com/beginners-guide-to-seo" target="_blank">
-                  https://moz.com/beginners-guide-to-seo
-               </a>
-           </li>
-           <li>
-              Lockard, L. (2014). SEO + social media optimization: Using social media to improve your SEO. Retrieved from
-               <a href="http://www.lizlockard.com/seo-social-media-optimization/" target="_blank">
-                   http://www.lizlockard.com/seo-social-media-optimization/
-               </a>
-           </li>
-        <li>
-              Bruce Clay Inc. (n.d.). Search engine optimization. Retrieved from
-               <a href="http://www.bruceclay.com/seo/search-engine-optimization.htm" target="_blank">
-                   http://www.bruceclay.com/seo/search-engine-optimization.htm
-               </a>
-           </li>
-           
-        <li>
-   SitePoint. (n.d.). Skool for search engine success. Retrieved from
-               <a href=" http://www.sitepoint.com/article/skool-search-engine-success" target="_blank">
-                   http://www.sitepoint.com/article/skool-search-engine-success
-               </a>
-           </li>
-           <!-- Add more references as needed -->
-       </ol>
-   
-       <!-- Instagram Icon Link -->
-       <foot>
-           <a href="https://www.instagram.com/torontomet/" target="_blank" aria-label="TMU Instagram">
-               <!-- Instagram icon from Font Awesome -->
-               <i class="fab fa-instagram"></i> Follow TMU 
-           </a>
-   
-   </foot>
-       <!-- Link to Linkedln -->
-   <footer>  <!-- Footer for the page, resembled from the header -->
-       <p>If you want to have a chat and take a look into my background , please visit my <a href="https://www.linkedin.com/in/nahiyan-zaman/" target="_blank">linkedln profile</a>.</p>
-   </footer>
-    <!-- The a tag is used for the links -->    
-   
-   </body>
+    
+</body>
 </html>
 
