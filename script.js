@@ -1,6 +1,4 @@
 
-// ---- JAVA SCRIPT DOCUMENT for index.html ---- //
-
 // prompt for user's name
 function prmptname() { //defines function
     let usernm = prompt("Please enter your name: ");  //pop-up box that asks this question to the user
@@ -35,46 +33,35 @@ function tggldropdown() {
     //checks whether the dropdown is visible or not (hidden = block, visible = none), currently set at block 
 }
 
-  document.addEventListener("DOMContentLoaded", function() {
-            const iframeElement = document.getElementById("soundcloudPlayer");
-            const widget = SC.Widget(iframeElement);
+function toggleTextSize() {
+    const textElements = document.querySelectorAll('body, p, h1, h2,h2x, .image-caption, .alt-text, a, button'); // Select all text elements
+    textElements.forEach(element => {
+        if (element.classList.contains('enlarged')) {3
+            element.classList.remove('enlarged');
+        } else {
+            element.classList.add('enlarged');
+        }
+    });
+}
 
-            function playAudio() { widget.play(); }
-            function pauseAudio() { widget.pause(); }
-            function playFromBeginning() { widget.seekTo(0); widget.play(); }
 
-            window.playAudio = playAudio;
-            window.pauseAudio = pauseAudio;
-            window.playFromBeginning = playFromBeginning;
+// Toggle Color-Blind Friendly Mode
+function toggleColorBlindMode() {
+    document.body.classList.toggle('color-blind-mode');
+}
 
-            function toggleTextSize() {
-                document.body.classList.toggle('enlarged-text');
-            }
-
-            function toggleColorBlindMode() {
-                document.body.classList.toggle('color-blind-mode');
-            }
-
-            window.toggleTextSize = toggleTextSize;
-            window.toggleColorBlindMode = toggleColorBlindMode;
-
-            // Toggle alt text descriptions
-            let altTextVisible = false;
-
-            function toggleAltText() {
-                altTextVisible = !altTextVisible; // Toggle the state
-
-                document.querySelectorAll('.image-item img').forEach((img, index) => {
-                    const altTextElement = document.getElementById(`altText${index + 1}`);
-                    if (altTextVisible) {
-                        altTextElement.textContent = img.alt;
-                        altTextElement.style.display = 'block';
-                    } else {
-                        altTextElement.style.display = 'none';
-                        altTextElement.textContent = '';
-                    }
-                });
-            }
-
-            window.toggleAltText = toggleAltText;
-        });
+// Toggle Alt Text Descriptions
+let altTextVisible = false;
+function toggleAltText() {
+    altTextVisible = !altTextVisible;
+    document.querySelectorAll('.image-item img').forEach((img, index) => {
+        const altTextElement = document.getElementById(`altText${index + 1}`);
+        if (altTextVisible) {
+            altTextElement.textContent = img.alt;
+            altTextElement.style.display = 'block';
+        } else {
+            altTextElement.style.display = 'none';
+            altTextElement.textContent = '';
+        }
+    });
+}
