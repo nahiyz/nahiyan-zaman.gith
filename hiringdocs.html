@@ -1,0 +1,125 @@
+<!DOCTYPE HTML5>  <!-- Indicates the the HTML doctype -->
+<html>
+<head> <!-- header of website  --> <!-- X -->
+    <meta charset="UTF-8">
+    <meta name="description" content="A web page demonstrating SEO and SMO techniques.">
+    <meta name="keywords" content="SEO, SMO, meta tags, social media optimization">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Nahiyan's Personal Website </title> <!-- Title --> 
+</head> 
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+<script src="https://w.soundcloud.com/player/api.js"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QDFS36SMB9Fxuy7sOHWw84/SjqxnfGxIk1klfDd5mr5e+Gx9+6M7lbC4n6W8Orta" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HtBR6TWuboz61MNG0V+KTYTYBLWswMEkJQ1BunUorKLMmtgSQZySHtxWoInNmd4v" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="hiringdocs.js" > </script> 
+
+<body>
+
+<!-- Image ID and source of it is derived from here, sets the width and bottom spacing-->
+<img id="myimg" src="myself.jpeg" alt="Image of Myself" style="width:250px;padding-bottom:20px;" onclick="imagelrg()"> <!-- function enlarges image -->
+<!-- Alt is for alternative text,  -->
+
+<nav> <!-- Wraps entire navigation bar -->
+    <ul class="nvbar"> <!-- Creates unordered list initially -->
+        <!-- First three navigation items linking to actual pages with hover effect -->
+        <li><a href="index.html" onmouseover="mOver(this)" onmouseout="mOut(this)">Home</a></li> <!-- Link to homepage -->
+        <li><a href="education.html" onmouseover="mOver(this)" onmouseout="mOut(this)">Education</a></li> <!-- Link to about page -->
+        <li><a href="hiringdocs.html" onmouseover="mOver(this)" onmouseout="mOut(this)">Hiring Docs</a></li> <!-- Link to interests page -->
+          
+        
+        <li><a href="contactform.html" onmouseover="mOver(this)" onmouseout="mOut(this)">Contact Me </a></li> <!-- Link to contact information page -->
+        
+    </ul>
+    </nav>
+
+  <!-- Accessibility control buttons -->
+  <div class="accessibility-controls">
+    <button onclick="toggleTextSize()">Click To Toggle Text Size</button>
+    <button onclick="toggleColorBlindMode()">Click To Toggle Color-Blind Friendly Mode</button>
+</div>
+
+<header>
+    <h1> Hiring Documentation </h1> <!-- X -->
+    <p> Welcome to the page that showcases my hiring documentation. Scroll down to view my resume, certificates and other credentials </p>
+    <!-- h is for the header elements, p__ stands for text/pargraph-->  
+</header>
+
+<h2>  Resume </h2>
+<p> My resume highlights my summary of skills, education, and my work experience </p>
+
+<div class="pdf-viewer-container">
+    <iframe id="resumeFrame1" src="Cybersecurity and Technical Roles Co-op Resume.pdf" title="Resume Viewer"></iframe>
+    <div class="pdf-actions">
+        <button onclick="reloadPDF('resumeFrame1')">Click To Reload Resume</button>
+        <a href="Cybersecurity and Technical Roles Co-op Resume.pdf" download>
+            <button>Click To View Resume In Full Screen</button>
+        </a>
+    </div>
+</div>
+
+<div class="credentials-section">
+    <h2>Highlighted Credentials</h2>
+    <p>Here are some of my key certifications and achievements:</p>
+    <div class="credentials-grid">
+        <div class="credential-item">
+            <img src="46290ccd-4240-436f-9c96-caab4bad6ed1.png" alt="Python Fundamentals" />
+            <p>Python Fundamentals 2.0 Badge</p>
+        </div>
+        <div class="credential-item">
+            <img src="33240213-3854-48da-a215-e88bde77bf9e.png" alt="Cloud and Azure Fundamentals" />
+            <p>Cloud and Azure Fundamentals Certificate</p>
+        </div>
+        <div class="credential-item">
+            <img src="c510a935-cb18-4a91-9863-c0ca945d0ef9.png" alt="Excel- Business Fundamentals" />
+            <p>Excel - Business Fundamentals Badge
+        </div>
+        <div class="credential-item">
+            <img src="Project Bits Financial Literacy Certificate (Partnered with The Canadian Foundation For Economic Education & The National Bank Of Canada) - Financial Literacy Certificate - 2021-04-18.png" alt="Financial Literacy Certificate" />
+            <p>Financial Literacy Certificate </p>
+        </div>
+    </div>
+</div>
+
+<div class="pdf-viewer-container">
+    <iframe id="resumeFrame2" src="MD Nahiyan_Zaman_105393704_wall (1).pdf" title="Resume Viewer"></iframe>
+    <div class="pdf-actions">
+        <button onclick="reloadPDF('resumeFrame2')">Click To Reload CPR Certificate</button>
+        <a href="MD Nahiyan_Zaman_105393704_wall (1).pdf" download>
+
+        </a>
+    </div>
+</div>
+
+   <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+            </div>
+            <div class="footer-social">
+            <div class="social-guidance">
+                <p>Connect with me:</p>
+            </div>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@nahiyanzaman9565" target="_blank" class="icon youtube" aria-label="Youtube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/nahiyan-zaman/" target="_blank" class="icon linkedin" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/nahiyan.z/" target="_blank" class="icon instagram" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <pfoot>&copy; 2024 Nahiyan Zaman. All rights reserved.</pfoot>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
+
