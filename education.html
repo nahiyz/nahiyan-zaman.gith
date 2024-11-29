@@ -1,0 +1,164 @@
+<!DOCTYPE HTML5>  <!-- Indicates the the HTML doctype -->
+<html>
+<head> <!-- header of website  --> <!-- X -->
+    <meta charset="UTF-8">
+    <meta name="description" content="A web page demonstrating SEO and SMO techniques.">
+    <meta name="keywords" content="SEO, SMO, meta tags, social media optimization">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Nahiyan's Personal Website </title> <!-- Title --> 
+</head> 
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+<script src="https://w.soundcloud.com/player/api.js"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QDFS36SMB9Fxuy7sOHWw84/SjqxnfGxIk1klfDd5mr5e+Gx9+6M7lbC4n6W8Orta" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HtBR6TWuboz61MNG0V+KTYTYBLWswMEkJQ1BunUorKLMmtgSQZySHtxWoInNmd4v" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+  <script src="education.js" > </script> 
+
+<body>
+
+<!-- Image ID and source of it is derived from here, sets the width and bottom spacing-->
+<img id="myimg" src="myself.jpeg" alt="Image of Myself" style="width:250px;padding-bottom:20px;" onclick="imagelrg()"> <!-- function enlarges image -->
+<!-- Alt is for alternative text,  -->
+
+<nav> <!-- Wraps entire navigation bar -->
+    <ul class="nvbar"> <!-- Creates unordered list initially -->
+        <!-- First three navigation items linking to actual pages with hover effect -->
+        <li><a href="index.html" onmouseover="mOver(this)" onmouseout="mOut(this)">Home</a></li> <!-- Link to homepage -->
+        <li><a href="education.html" onmouseover="mOver(this)" onmouseout="mOut(this)">Education</a></li> <!-- Link to about page -->
+        <li><a href="hiringdocs.html" onmouseover="mOver(this)" onmouseout="mOut(this)">Hiring Docs</a></li> <!-- Link to interests page -->
+          
+        
+        <li><a href="contactform.html" onmouseover="mOver(this)" onmouseout="mOut(this)">Contact Me </a></li> <!-- Link to contact information page -->
+        
+    </ul>
+    </nav>
+
+ <!-- Accessibility control buttons -->
+ <div class="accessibility-controls">
+    <button onclick="toggleTextSize()">Click To Toggle Text Size</button>
+    <button onclick="toggleColorBlindMode()">Click To Toggle Color-Blind Friendly Mode</button>
+</div>
+
+<header>
+    <h1>Education</h1> <!-- X -->
+    <p>Welcome to the page that showcases my educational background. Scroll down to view my courses, program, educational history, extra-curricular activities, and educational awards </p>
+    <!-- h is for the header elements, p__ stands for text/pargraph-->  
+</header>
+   
+   <!-- Education/School Section -->
+       <h2>Education</h2>
+       <ol>   <!-- Open list with numbers -->
+       <li><strong>High School #1:</strong> Riverdale Collegiate Institute (September 2016 - June 2017)</li>
+       <li><strong>High School #2:</strong> SATEC W.A Porter Collegiate Institute (September 2017 - June 2020)</li>
+           <li><strong>University:</strong> Ted Rogers School of Management, Toronto Metropolitan University (formerly Ryerson University) - Bachelor of Commerce in Business Technology Management (Expected Graduation: April 2025)</li>
+       </ol>
+         <!-- Li generates any list as bullet points/ numbers/ etc. -->
+         
+            <!-- Awards -->
+       <h3>Educational Awards</h3>
+       <ul>   <!-- List with bullet points -->
+           <li>Dean's List 2020-2021, Ted Rogers School of Management </li>
+           <li>Outstanding Student Leadership Award, Satec W.A Porter Collegiate Institute - 2018</li>
+       </ul>
+         
+         <div class="video-container">
+        <iframe
+            src="https://www.youtube.com/embed/J7Wq8PzCxeo"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
+    
+    
+   <!-- Program and course description -->
+   <section>     <!-- Defines an open section on the webpage as formatting -->
+       <h2>About My Program</h2>
+       <p>The Business Technology Management (BTM) program combines both business and IT concepts, to prepare me in many industries when managing technical projects and creating effective solutions by using technology to address business needs. </p>
+       
+       <h3>Most Useful Course</h3>
+       <p>The course I found most useful is <strong> ITM618 (Business Intelligence and Analytics).</strong> This course provided me with a strong foundation of business intelligence, data warehouses, datamarts and different machine learning algorithms through course content, Python labs, and statistical projects. In simple terms, it deepened my understanding on business decision-making through analytics. </p>
+   </section>
+   
+   <h3> Other Notable Courses </h3>
+   
+   <table>
+<tr>
+  <th>Course</th>
+  <th>Description</th>
+</tr>
+<tr>
+  <td> <div id="link-container"> ITM780 - Web Design and Management</div> </td> 
+  <td> <div id="text-container"> This course covers the fundamentals of developing and managing business websites using HTML5, CSS, and JavaScript. It emphasizes best practices, web standards, and practical skills for publishing and managing sites. Topics include backup, disaster recovery, and maintaining a professional web presence.. </div> </td>
+</tr>
+
+<tr>
+  <td> <div id="link-container">   ITM200 - Fundamentals of Programming </div> </td>
+  <td> <div id="text-container"> This course covers object-oriented and event-driven programming principles in a business context, emphasizing logic development, modular design, testing, and debugging. Concepts like variables, loops, arrays, and error handling are taught using Python in practical lab sessions.</div> </td>
+</tr>
+<tr>
+  <td> <div id="link-container"> ITM500 - Database Management and Design </div> </td>
+  <td> <div id="text-container"> This course introduces key concepts of data and information management, including data modeling and relational databases. It covers database administration, data quality, and security essentials. Structured Query Language (SQL) is explored for decision support applications.</div> </td>
+</tr>
+</table>
+ 
+    <div class="video-container">
+        <iframe
+            src="https://www.youtube.com/embed/pMPKZrSsTYU"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
+    
+       
+   <!-- Extra-curricular activities -->
+   <section>
+       <h2>Extra-curricular Activities</h2> I actively participated in a variety of extra-curricular activities that helped me grow both personally and professionally. Below is a list of clubs, sports teams and other groups that I partaked in:
+       <ol>
+           <li>Finance Project Lead, IQRA Magazine at Toronto Metropolitan University</li>
+            <li>Intramurals Team Captain, Competitive Soccer at Toronto Metropolitan University</li>
+           <li>Volunteer, Dentonia Park Soccer Tournament</li>
+           <li>Participant, Ted Rogers Leadership Program</li>
+       </ol>
+   </section>
+
+   <div class="image-container">
+    <img src="IQRA Magazine screenshot.png" alt="Image 1">
+    <img src="BCS soccer tourney.jpg" alt="Image 2">
+</div>
+  
+
+     <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+            </div>
+            <div class="footer-social">
+            <div class="social-guidance">
+                <p>Connect with me:</p>
+            </div>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@nahiyanzaman9565" target="_blank" class="icon youtube" aria-label="Youtube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/nahiyan-zaman/" target="_blank" class="icon linkedin" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/nahiyan.z/" target="_blank" class="icon instagram" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <pfoot>&copy; 2024 Nahiyan Zaman. All rights reserved.</pfoot>
+            </div>
+        </div>
+    </footer>
+    
+    
+</body>
+</html>
+
